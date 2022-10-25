@@ -8,5 +8,3 @@ function getComputerChoice() {
         console.log('Scissors');
     }
 }
-
-getComputerChoice();
