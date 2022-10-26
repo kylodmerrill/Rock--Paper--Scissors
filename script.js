@@ -37,7 +37,21 @@ function game() {
     let playerScore = 0;
 
     for (i = 0; i < 5; i++) {
-        console.log(playRound());
+        let result = playRound();
+        console.log(result);
+        if (result === 'Rock beats Scissors. You win!' || result === 'Paper beats Rock. You win!' || result === 'Scissors beats Paper. You win!') {
+            playerScore += 1;
+        } else if (result === 'Paper beats Rock. You lose!' || result === 'Scissors beats Paper. You lose!' || result === 'Rock beats Scissors. You lose!') {
+            computerScore += 1;
+        }
+    }
+
+    if (playerScore > computerScore) {
+        console.log('You win ' + playerScore + ' to ' + computerScore + " !");
+    } else if (computerScore > playerScore) {
+        console.log('You lose ' + playerScore + ' to ' + computerScore + ' !');
+    } else {
+        console.log('It\'s a tie! ' + playerScore + ' to ' + computerScore);
     }
 }
 
