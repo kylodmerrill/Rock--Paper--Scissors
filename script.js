@@ -32,4 +32,12 @@ function playRound() {
     }
 }
 
+function game() {
+    let computerScore = 0;
+    let playerScore = 0;
+
+    for (i = 0; i < 5; i++) {
+        console.log(playRound());
+    }
+}
 
