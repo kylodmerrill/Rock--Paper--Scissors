@@ -9,23 +9,27 @@ function getComputerChoice() {
     }
 }
 
-function playRound(playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase();
-    computerSelection = computerSelection.toLowerCase();
-    if (playerSelection == 'rock' && computerSelection == 'scissors') {
+function playRound() {
+    let playerSelection = window.prompt('Type Rock, Paper, or Scissors!', 'Rock');
+    let computerSelection = getComputerChoice();
+    lowerCasePlayer = playerSelection.toLowerCase();
+    lowerCaseComputer = computerSelection.toLowerCase();
+
+    if (lowerCasePlayer == 'rock' && lowerCaseComputer == 'scissors') {
         return 'Rock beats Scissors. You win!';
-    } else if (playerSelection == 'paper' && computerSelection == 'rock') {
+    } else if (lowerCasePlayer == 'paper' && lowerCaseComputer == 'rock') {
         return 'Paper beats Rock. You win!';
-    } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
+    } else if (lowerCasePlayer == 'scissors' && lowerCaseComputer == 'paper') {
         return 'Scissors beats Paper. You win!';
-    } else if (playerSelection == 'rock' && computerSelection == 'paper') {
+    } else if (lowerCasePlayer == 'rock' && lowerCaseComputer == 'paper') {
         return 'Paper beats Rock. You lose!';
-    } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
+    } else if (lowerCasePlayer == 'paper' && lowerCaseComputer == 'scissors') {
         return 'Scissors beats Paper. You lose!';
-    } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
+    } else if (lowerCasePlayer == 'scissors' && lowerCaseComputer == 'rock') {
         return 'Rock beats Scissors. You lose!';
     } else {
         return 'Tie!';
     }
 }
+
 
