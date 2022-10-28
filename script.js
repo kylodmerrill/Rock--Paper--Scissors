@@ -1,3 +1,5 @@
+// Create function to generate random number and return
+// Rock, Paper, or Scissors for corresponding number
 function getComputerChoice() {
     randomNum = Math.floor(Math.random() * 4);
     if (randomNum == 1) {
@@ -9,6 +11,9 @@ function getComputerChoice() {
     }
 }
 
+// Create function to run through round. Player selection is saved from input of prompt.
+// Computer selection is saved from random generated number from function. Convert both variables to 
+// lower case. Output result for who wins the round
 function playRound() {
     let playerSelection = window.prompt('Type Rock, Paper, or Scissors!', 'Rock');
     let computerSelection = getComputerChoice();
@@ -32,6 +37,8 @@ function playRound() {
     }
 }
 
+// Create function to run a full game with five rounds. 
+// Variables are declared to keep score and are incremented upon each round
 function game() {
     let computerScore = 0;
     let playerScore = 0;
@@ -46,6 +53,7 @@ function game() {
         }
     }
 
+// Winner of the game whole game is declared
     if (playerScore > computerScore) {
         console.log('You win ' + playerScore + ' to ' + computerScore + " !");
     } else if (computerScore > playerScore) {
