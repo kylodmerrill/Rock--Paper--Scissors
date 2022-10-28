@@ -1,10 +1,10 @@
 // Create function to generate random number and return
 // Rock, Paper, or Scissors for corresponding number
 function getComputerChoice() {
-    randomNum = Math.floor(Math.random() * 4);
-    if (randomNum == 1) {
+    randomNum = Math.floor(Math.random() * 3);
+    if (randomNum == 0) {
         return('Rock');
-    } else if (randomNum == 2) {
+    } else if (randomNum == 1) {
         return('Paper');
     } else {
         return('Scissors');
