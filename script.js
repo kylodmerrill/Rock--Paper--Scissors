@@ -43,7 +43,7 @@ function game() {
     let computerScore = 0;
     let playerScore = 0;
 
-    for (i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
         let result = playRound();
         console.log(result);
         if (result === 'Rock beats Scissors. You win!' || result === 'Paper beats Rock. You win!' || result === 'Scissors beats Paper. You win!') {
