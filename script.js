@@ -72,12 +72,22 @@ function playRound() {
         cpuChoice.textContent = 'Rock';
         feedback.textContent = 'Rock beats Scissors. You lose this round!';
         userWins = false;
-    } else {
-        playerChoice.textContent = `${playerSelection}`;
-        cpuChoice.textContent = `${lowerCaseComputer}`;
+    } else if (lowerCasePlayer === 'rock' && lowerCaseComputer === 'rock') {
+        playerChoice.textContent =  'Rock';
+        cpuChoice.textContent = 'Rock';
         feedback.textContent = 'Tie!';
         userWins = null;
-    }
+    } else if (lowerCasePlayer === 'paper' && lowerCaseComputer === 'paper') {
+        playerChoice.textContent =  'Paper';
+        cpuChoice.textContent = 'Paper';
+        feedback.textContent = 'Tie!';
+        userWins = null;
+    } else if (lowerCasePlayer === 'scissors' && lowerCaseComputer === 'scissors') {
+        playerChoice.textContent =  'Scissors';
+        cpuChoice.textContent = 'Scissors';
+        feedback.textContent = 'Tie!';
+        userWins = null;
+    } 
 
     if (userWins === true) {
         userScore += 1;
